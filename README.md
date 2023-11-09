@@ -5,5 +5,5 @@ Cài xampp : https://www.apachefriends.org/download.html <br/>
 Cài node_modules trong project : npm install <br/>
 
 RUN(tạo 2 terminal để chạy cùng lúc) <br/>
-    php artisan <br/>
+    php artisan serve <br/>
     npx vite <br/>
