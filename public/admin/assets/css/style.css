@@ -105,6 +105,9 @@
 /*-------------------------------------------------------------------*/
 /* === Import template variables === */
 /*-------------------------------------------------------------------*/
+
+ /* CSS để ẩn phần con mặc định */
+
 /* === SCSS Compass Functions === */
 @-moz-keyframes flash {
   0% {
@@ -20890,7 +20893,8 @@ div.tagsinput {
       margin-bottom: 0;
       margin-top: 0;
       padding: 0 0 0 3.25rem;
-      list-style: none; }
+      list-style: none;
+    }
       .sidebar .nav.sub-menu .nav-item {
         padding: 0; }
         .sidebar .nav.sub-menu .nav-item .nav-link {
@@ -21131,5 +21135,6 @@ div.tagsinput {
   width: 100%;
   -webkit-flex-grow: 1;
   flex-grow: 1; }
+
 
 /*# sourceMappingURL=maps/style.css.map */
