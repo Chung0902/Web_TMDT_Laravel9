@@ -78,18 +78,18 @@
                 <ul class="nav flex-column sub-menu">
                     <li class="nav-item"> <a class="nav-link" href="{{url('/view_product')}}">Add Products</a></li>
                     <li class="nav-item"> <a class="nav-link" href="">Show Products</a></li>
-                    </li>
-                </ul>
-            </div>
         </li>
-       
-        <li class="nav-item menu-items">
-            <a class="nav-link" href="{{url('view_category')}}">
-                <span class="menu-icon">
-                    <i class="mdi mdi-playlist-play"></i>
-                </span>
-                <span class="menu-title">Category</span>
-            </a>
-        </li>
+    </ul>
+    </div>
+    </li>
+
+    <li class="nav-item menu-items">
+        <a class="nav-link" href="{{url('view_category')}}">
+            <span class="menu-icon">
+                <i class="mdi mdi-playlist-play"></i>
+            </span>
+            <span class="menu-title">Category</span>
+        </a>
+    </li>
     </ul>
 </nav>
