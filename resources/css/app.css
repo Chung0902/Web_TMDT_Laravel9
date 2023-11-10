@@ -4,3 +4,8 @@
 .collapse {
     visibility: visible;
 }
+img,
+video {
+  max-width: none;
+  height: auto;
+}
