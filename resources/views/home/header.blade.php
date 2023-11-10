@@ -39,26 +39,10 @@
                     </form>
                     @if (Route::has('login'))
                         @auth
-                            {{-- <li class="nav-item">
+                            <li class="nav-item">
                                 <x-app-layout>
 
                                 </x-app-layout>
-                            </li> --}}
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{ Auth::user()->name }}
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <form method="POST" action="{{ route('logout') }}">
-                                        @csrf
-                                        <x-dropdown-link :href="route('logout')"
-                                            onclick="event.preventDefault();
-                                          this.closest('form').submit();">
-                                            {{ __('Logout') }}
-                                        </x-dropdown-link>
-                                    </form>
-                                </div>
                             </li>
                         @else
                             <li class="nav-item">
