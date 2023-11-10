@@ -5,29 +5,29 @@
     @include('admin.css')
 
     <style type="text/css">
-        .div_center {
-            text-align: center;
-            padding-top: 40px;
-        }
+    .div_center {
+        text-align: center;
+        padding-top: 40px;
+    }
 
-        .font_size {
-            font-size: 40px;
-            padding-bottom: 40px;
-        }
+    .font_size {
+        font-size: 40px;
+        padding-bottom: 40px;
+    }
 
-        .text_color {
-            color: black;
-            padding-bottom: 20px;
-        }
+    .text_color {
+        color: black;
+        padding-bottom: 20px;
+    }
 
-        label {
-            display: inline-block;
-            width: 200px;
-        }
+    label {
+        display: inline-block;
+        width: 200px;
+    }
 
-        .div_design {
-            padding-bottom: 15px;
-        }
+    .div_design {
+        padding-bottom: 15px;
+    }
     </style>
 
 </head>
@@ -44,16 +44,17 @@
             <div class="content-wrapper">
 
                 @if (session()->has('message'))
-                    <div class="alert alert-success">
+                <div class="alert alert-success">
 
-                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
 
-                        {{ session()->get('message') }}
+                    {{ session()->get('message') }}
 
-                    </div>
+                </div>
                 @endif
 
                 <div class="div_center">
+
                     <h1 class="font_size">Add Product</h1>
 
                     <form action="{{ url('/add_product') }}" method="POST" enctype="multipart/form-data">
@@ -62,13 +63,12 @@
 
                         <div class="div_design">
                             <label for="">Product Title : </label>
-                            <input class="text_color" type="text" name="title" placeholder="Write a title"
-                                required="">
+                            <input class="text_color" type="text" name="title" placeholder="Write a title" required="">
                         </div>
                         <div class="div_design">
                             <label for="">Product Description : </label>
-                            <input class="text_color" type="text" name="description "
-                                placeholder="Write a description" required="">
+                            <input class="text_color" type="text" name="description " placeholder="Write a description"
+                                required="">
                         </div>
                         <div class="div_design">
                             <label for="">Product Price : </label>
@@ -91,8 +91,8 @@
                                 <option value="" selected="">Add a category here</option>
 
                                 @foreach ($category as $category)
-                                    <option value="{{ $category->category_name }}">{{ $category->category_name }}
-                                    </option>
+                                <option value="{{ $category->category_name }}">{{ $category->category_name }}
+                                </option>
                                 @endforeach
 
                             </select>
