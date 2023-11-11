@@ -50,7 +50,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach($product as $product)
+                        @foreach($products as $product)
                         <tr>
                             <th scope="row">{{$product->title}}</th>
                             <td>{{$product->description}}</td>

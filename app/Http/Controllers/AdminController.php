@@ -47,7 +47,7 @@ class AdminController extends Controller
         $product = new Product();
 
         $product->title = $request->title;
-        $product->description = $request->description;
+        $product->description = $request->description ?: null;
         $product->price = $request->price;
         $product->discount_price = $request->discount_price;
         $product->quantity = $request->quantity;
@@ -67,8 +67,8 @@ class AdminController extends Controller
 
     public function show_product()
     {
-        $product = Product::all();
-        return view('admin.show_product',compact('product'));
+        $products = Product::all();
+        return view('admin.show_product',compact('products'));
     }
 
     public function delete_product($id)
@@ -91,7 +91,7 @@ class AdminController extends Controller
         $product = product::find($id);
 
         $product->title = $request->title;
-        $product->description = $request->description;
+        $product->description = $request->description ;
         $product->price = $request->price;
         $product->discount_price = $request->discount_price;
         $product->quantity = $request->quantity;

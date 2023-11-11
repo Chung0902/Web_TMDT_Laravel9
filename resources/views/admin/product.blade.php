@@ -67,13 +67,11 @@
                         </div>
                         <div class="div_design">
                             <label for="">Product Description : </label>
-                            <input class="text_color" type="text" name="description " placeholder="Write a description"
-                                required="">
+                            <input class="text_color" type="text" name="description" placeholder="Write a description" required="">
                         </div>
                         <div class="div_design">
                             <label for="">Product Price : </label>
-                            <input class="text_color" type="number" name="price" placeholder="Write a price"
-                                required="">
+                            <input class="text_color" type="number" name="price" placeholder="Write a price" required="">
                         </div>
                         <div class="div_design">
                             <label for="">Discount Price : </label>
