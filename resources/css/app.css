@@ -7,5 +7,5 @@
 img,
 video {
   max-width: none;
-  height: auto;
+  height: revert-layer;
 }

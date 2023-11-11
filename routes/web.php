@@ -29,6 +29,7 @@ Route::middleware([
     })->name('dashboard');
 
     route::get('/redirect',[HomeController::class,'redirect']); 
+    //admin
 
     route::get('/view_category',[AdminController::class,'view_category']);
     
@@ -47,4 +48,7 @@ Route::middleware([
     route::get('/update_product/{id}',[AdminController::class,'update_product']);
     
     route::post('/update_product_confirm/{id}',[AdminController::class,'update_product_confirm']);
+
+    //home
+    route::get('/product_details/{id}',[HomeController::class,'product_details']);
 });
