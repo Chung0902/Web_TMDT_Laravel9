@@ -14,6 +14,11 @@
         height: 200px !important;
         border-radius: 0 !important;
     }
+    .font{
+        font-size: 35px;
+        margin-top: -50px;
+        text-align: center;
+    }
     </style>
 </head>
 
@@ -35,7 +40,7 @@
 
                 </div>
                 @endif
-                <p class="text-center p-5 fs-1 fw-bold">All Product</p>
+                <p class="text-center p-5 fs-1 fw-bold font">All Product</p>
                 <table class="table table-bordered border-5 center">
                     <thead class="table-light">
                         <tr>
