@@ -13,7 +13,7 @@ class HomeController extends Controller
 
     public function index()
     {
-        $product = Product::paginate();
+        $product = Product::paginate(3);
         return view('home.userpage', compact('product'));
     }
 
@@ -24,7 +24,7 @@ class HomeController extends Controller
         if ($usertype == '1') {
             return view('admin.home');
         } else {
-            $product = Product::paginate();
+            $product = Product::paginate(3);
             return view('home.userpage', compact('product'));
         }
     }
