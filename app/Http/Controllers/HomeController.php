@@ -143,7 +143,7 @@ class HomeController extends Controller
             $cart=cart::find($cart_id);
             $cart->delete();
         }
-        return redirect()->back();
+        return redirect()->back()->with('message', 'We have Received your Order. We will connect with you soon');
 
     }
 }
