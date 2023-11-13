@@ -119,9 +119,9 @@ class HomeController extends Controller
     {
         $user=Auth::user();
         $userid=$user->id;
-        dd($userid);
-        $data=cart::where('userid','=',$userid)->get();
-      
+        
+        $data=cart::where('user_id','=',$userid)->get();
+        
         foreach($data as $data)
         {
             $order=new order;
@@ -134,11 +134,11 @@ class HomeController extends Controller
             $order->price=$data->price;
             $order->quantity=$data->quantity;
             $order->image=$data->image;
-            $order->product_id=$data->product_id;
+            $order->Product_id=$data->Product_id;
 
             $order->payment_status='cash on delivery';
-            $order->payment_status='processing';
-            $order->save;
+            $order->delivery_status='processing';
+            $order->save();
             $cart_id=$data->id;
             $cart=cart::find($cart_id);
             $cart->delete();
