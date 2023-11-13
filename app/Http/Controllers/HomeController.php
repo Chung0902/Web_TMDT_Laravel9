@@ -69,7 +69,7 @@ class HomeController extends Controller
         $cart->email=$user->email;
         $cart->phone=$user->phone;
         $cart->address=$user->address;
-        $cart->user_id=$user->user_id;
+        $cart->user_id=$user->id;
         
         $cart->Product_title=$product->title;
         
@@ -98,7 +98,7 @@ class HomeController extends Controller
             $id=Auth::user()->id;
             $cart=cart::where('user_id','=',$id)->get();
 
-            return view('home.showcart',compact('cart'));
+            return view('home.show_cart',compact('cart'));
         }
         else 
         {
