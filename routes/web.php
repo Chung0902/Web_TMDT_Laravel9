@@ -17,7 +17,13 @@ use App\Http\Controllers\AdminController;
 |
 */
 
+
 route::get('/',[HomeController::class,'index']);
+route::get('/blog_list',[HomeController::class,'blog_list']);
+route::get('/about',[HomeController::class,'about']);
+route::get('/testimonial',[HomeController::class,'testimonial']);
+route::get('/contact',[HomeController::class,'contact']);
+
 
 Route::middleware([
     'auth:sanctum',

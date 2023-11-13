@@ -19,18 +19,18 @@
                             aria-haspopup="true" aria-expanded="true"> <span class="nav-label">Pages <span
                                     class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="about.html">About</a></li>
-                            <li><a href="testimonial.html">Testimonial</a></li>
+                            <li><a href="{{ url('/about') }}">About</a></li>
+                            <li><a href="{{ url('/testimonial') }}">Testimonial</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="product.html">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="blog_list.html">Blog</a>
-                    </li>
+                        <a class="nav-link" href="{{ url('/blog_list') }}">Blog</a>
+                    </li>                    
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                        <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('show_cart')}}">Cart</a>
