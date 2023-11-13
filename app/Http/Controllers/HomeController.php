@@ -17,6 +17,22 @@ class HomeController extends Controller
         $product = Product::paginate(3);
         return view('home.userpage', compact('product'));
     }
+    public function blog_list()
+    {
+        return view('home.blog_list');
+    }
+    public function testimonial()
+    {
+        return view('home.testimonial');
+    }
+    public function about()
+    {
+        return view('home.about');
+    }
+    public function contact()
+    {
+        return view('home.contact');
+    }
 
     public function redirect()
     {
@@ -54,7 +70,7 @@ class HomeController extends Controller
         $cart->email=$user->email;
         $cart->phone=$user->phone;
         $cart->address=$user->address;
-        $cart->user_id=$user->user_id;
+        $cart->user_id=$user->id;
         
         $cart->Product_title=$product->title;
         
@@ -83,7 +99,7 @@ class HomeController extends Controller
             $id=Auth::user()->id;
             $cart=cart::where('user_id','=',$id)->get();
 
-            return view('home.showcart',compact('cart'));
+            return view('home.show_cart',compact('cart'));
         }
         else 
         {
