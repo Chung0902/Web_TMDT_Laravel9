@@ -13,6 +13,7 @@ use Session;
 use Stripe;
 
 
+
 class HomeController extends Controller{
 
 
