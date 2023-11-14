@@ -6,6 +6,9 @@ use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\AdminController;
 
+
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -65,4 +68,8 @@ Route::middleware([
     route::get('/remove_cart/{id}',[HomeController::class,'remove_cart']);
 
     route::get('/cash_order',[HomeController::class,'cash_order']);
+
+    route::get('/stripe/{totalprice}',[HomeController::class,'stripe']);
+
+    route::post('/stripe/{totalprice}',[HomeController::class, 'stripePost'])->name('stripe.post');
 });
