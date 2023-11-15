@@ -28,7 +28,7 @@
             <div class="content-wrapper">
 
             <h1 style= " text-align: center; font-site:25px;">Send Email to {{$order->email}}</h1>
-            <from action= "{{url('send_user_email',$order->id)}}" method="POST">
+            <form action= "{{url('send_user_email',$order->id)}}" method="POST">
                 @csrf 
             <div style="padding-left: 20%; padding-top : 30px">
                 <label  for="">
@@ -83,7 +83,7 @@
 
                 <input type="submit" value= " Send Email" class="btn btn-primary" name="body">
             </div>
-            </from>
+    </form>
         </div>
         </div>
           <!-- content-wrapper ends -->

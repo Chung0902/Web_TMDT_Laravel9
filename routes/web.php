@@ -66,6 +66,8 @@ Route::middleware([
 
     route::post('/send_user_email/{id}',[AdminController::class,'send_user_email']);
 
+    route::get('/search',[AdminController::class,'searchdata']);
+
 
     //home
     route::get('/product_details/{id}',[HomeController::class,'product_details']);
