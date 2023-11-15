@@ -57,6 +57,7 @@
                         <th>Delivery Status</th>
                         <th >Image</th>
                         <th >Delivered</th>
+                        <th >Send Email</th>
                     </tr>
 
                      @foreach($order as $order)
@@ -80,6 +81,10 @@
                           @else
                             <p style="color: green;">Delivered</p>
                           @endif
+                        </td>
+
+                        <td>
+                          <a href="{{url('send_email', $order->id)}}" class= "btn btn-info">Send Email</a>
                         </td>
                     </tr>
 

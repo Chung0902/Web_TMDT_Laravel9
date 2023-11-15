@@ -61,7 +61,10 @@ Route::middleware([
     route::get('/order',[AdminController::class,'order']);
 
     route::get('/delivered/{id}',[AdminController::class,'delivered']);
+    
+    route::get('/send_email/{id}',[AdminController::class,'send_email']);
 
+    route::post('/send_user_email/{id}',[AdminController::class,'send_user_email']);
 
 
     //home
