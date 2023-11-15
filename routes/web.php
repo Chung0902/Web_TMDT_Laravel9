@@ -58,6 +58,12 @@ Route::middleware([
     
     route::post('/update_product_confirm/{id}',[AdminController::class,'update_product_confirm']);
 
+    route::get('/order',[AdminController::class,'order']);
+
+    route::get('/delivered/{id}',[AdminController::class,'delivered']);
+
+
+
     //home
     route::get('/product_details/{id}',[HomeController::class,'product_details']);
 
