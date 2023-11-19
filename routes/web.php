@@ -83,4 +83,11 @@ Route::middleware([
     route::get('/stripe/{totalprice}',[HomeController::class,'stripe']);
 
     route::post('/stripe/{totalprice}',[HomeController::class, 'stripePost'])->name('stripe.post');
+
+    route::get('/show_order',[HomeController::class,'show_order']);
+
+    route::get('/cancel_order/{id}',[HomeController::class,'cancel_order']);
+
+    route::get('/product_search',[HomeController::class,'product_search']);
+
 });
