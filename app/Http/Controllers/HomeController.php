@@ -226,4 +226,47 @@ class HomeController extends Controller{
               
         return back();
     }
+
+
+    public function show_order()
+    {
+        if(Auth::id())
+        {   
+            $user=Auth::user();    
+
+            $userid=$user->id;
+
+            $order=order::where('user_id','=',$userid)->get();
+
+            return view('home.order', compact('order')); 
+        }
+        else
+        {
+            return redirect('login');
+        }
+
+    }
+
+    public function cancel_order($id)
+    {
+        $order=order::find($id);
+
+        $order->delivery_status='You canceled the order';
+
+        $order->save();
+
+        return redirect()->back();
+    }
+
+    public function product_search(Request $request)
+    {
+        $search_text=$request->search;
+
+        $product=product::where('title','LIKE',"%$search_text%")->orWhere('category','LIKE',"$search_text")->paginate(10);
+
+        return view('home.userpage', compact('product'));
+    }
+
+
+
 }
