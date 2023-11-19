@@ -6,6 +6,9 @@ use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\AdminController;
 
+
+use Illuminate\Http\Request;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +20,13 @@ use App\Http\Controllers\AdminController;
 |
 */
 
+
 route::get('/',[HomeController::class,'index']);
+route::get('/blog_list',[HomeController::class,'blog_list']);
+route::get('/about',[HomeController::class,'about']);
+route::get('/testimonial',[HomeController::class,'testimonial']);
+route::get('/contact',[HomeController::class,'contact']);
+
 
 Route::middleware([
     'auth:sanctum',
@@ -51,8 +60,36 @@ Route::middleware([
     
     route::post('/update_product_confirm/{id}',[AdminController::class,'update_product_confirm']);
 
+    route::get('/order',[AdminController::class,'order']);
+
+    route::get('/delivered/{id}',[AdminController::class,'delivered']);
+    
+    route::get('/send_email/{id}',[AdminController::class,'send_email']);
+
+    route::post('/send_user_email/{id}',[AdminController::class,'send_user_email']);
+
+    route::get('/search',[AdminController::class,'searchdata']);
+
+
     //home
     route::get('/product_details/{id}',[HomeController::class,'product_details']);
 
     route::post('/add_cart/{id}',[HomeController::class,'add_cart']);
+
+    route::get('/show_cart',[HomeController::class,'show_cart']);
+
+    route::get('/remove_cart/{id}',[HomeController::class,'remove_cart']);
+
+    route::get('/cash_order',[HomeController::class,'cash_order']);
+
+    route::get('/stripe/{totalprice}',[HomeController::class,'stripe']);
+
+    route::post('/stripe/{totalprice}',[HomeController::class, 'stripePost'])->name('stripe.post');
+
+    route::get('/show_order',[HomeController::class,'show_order']);
+
+    route::get('/cancel_order/{id}',[HomeController::class,'cancel_order']);
+
+    route::get('/product_search',[HomeController::class,'product_search']);
+
 });
