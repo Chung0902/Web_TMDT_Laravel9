@@ -16,6 +16,10 @@ class HomeController extends Controller
         $product = Product::paginate();
         return view('home.userpage', compact('product'));
     }
+    public function products()
+    {
+        return view('home.productpage');
+    }
 
     public function redirect()
     {

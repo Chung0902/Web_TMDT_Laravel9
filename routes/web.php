@@ -29,6 +29,8 @@ Route::middleware([
     })->name('dashboard');
 
     route::get('/redirect',[HomeController::class,'redirect']); 
+
+    route::get('/products',[HomeController::class,'products']);
     //admin
 
     route::get('/view_category',[AdminController::class,'view_category']);
