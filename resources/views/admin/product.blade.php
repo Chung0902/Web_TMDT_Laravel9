@@ -44,13 +44,13 @@
             <div class="content-wrapper">
 
                 @if (session()->has('message'))
-                <div class="alert alert-success">
+                    <div class="alert alert-success">
 
-                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
 
-                    {{ session()->get('message') }}
+                        {{ session()->get('message') }}
 
-                </div>
+                    </div>
                 @endif
 
                 <div class="div_center">
