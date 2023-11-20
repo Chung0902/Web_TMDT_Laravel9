@@ -40,6 +40,8 @@ Route::middleware([
     route::get('/redirect',[HomeController::class,'redirect']); 
 
     route::get('/products',[HomeController::class,'products']);
+
+    route::get('/categories',[HomeController::class,'categories']);
     //admin
 
     route::get('/view_category',[AdminController::class,'view_category']);

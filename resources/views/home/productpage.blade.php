@@ -79,7 +79,7 @@
                            {{$products->title}}
                         </h5>
                         <h6>
-                           {{$products->title}}
+                           {{$products->price}}
                         </h6>
                      </div>
                   </div>

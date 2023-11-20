@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Product;
+use App\Models\Category;
 use App\Models\Cart;
 use App\Models\Order;
 
@@ -24,7 +25,8 @@ class HomeController extends Controller{
     public function index()
     {
         $product = Product::paginate(3);
-        return view('home.userpage', compact('product'));
+        $category = Category::all();
+        return view('home.userpage', compact('product'),compact('category'));
     }
 
     public function products()
@@ -36,7 +38,7 @@ class HomeController extends Controller{
     {
         $product= Product::all();
         return view('home.productpage',compact('product'));
-    }
+    } 
     public function redirect()
     {
         $usertype = Auth::user()->usertype;
