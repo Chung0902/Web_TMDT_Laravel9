@@ -47,7 +47,7 @@
                   <form action="{{url('search')}}" method="get">
                   @csrf
 
-                    <input type="text" name="search" placeholder="Search for something...">
+                    <input style="color: black;" type="text" name="search" placeholder="Search for something...">
                     <input type="submit" value="search" class="btn btn-outline-primary" >
 
                   </form>

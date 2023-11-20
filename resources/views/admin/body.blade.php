@@ -34,7 +34,7 @@
                     <h3 class="mb-0">{{$total_product}}</h3>
                   </div>
                 </div>
-                <div class="col-2">
+                <div class="col-3">
                   <div class="icon icon-box-success ">
                     <span class="mdi mdi-arrow-top-right icon-item"></span>
                   </div>

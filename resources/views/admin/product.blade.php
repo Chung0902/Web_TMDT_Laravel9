@@ -57,7 +57,7 @@
 
                     <h1 class="font_size">Add Product</h1>
 
-                    <form action="{{ url('/add_product') }}" method="POST" enctype="multipart/form-data">
+                    <form style="color: black;" action="{{ url('/add_product') }}" method="POST" enctype="multipart/form-data">
 
                         @csrf
 
