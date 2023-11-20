@@ -2,7 +2,7 @@
     <div class="container">
        <div class="heading_container heading_center">
           <h2>
-             Customer's Testimonial
+             Categories
           </h2>
        </div>
        <div id="carouselExample3Controls" class="carousel slide" data-ride="carousel">
@@ -18,7 +18,7 @@
                    </div>
                    <div class="detail-box">
                       <h5>
-                         Anna Trevor
+                         Anna Trevor1
                       </h5>
                       <h6>
                          Customer
@@ -40,7 +40,7 @@
                    </div>
                    <div class="detail-box">
                       <h5>
-                         Anna Trevor
+                         Anna Trevor2
                       </h5>
                       <h6>
                          Customer
@@ -62,7 +62,7 @@
                    </div>
                    <div class="detail-box">
                       <h5>
-                         Anna Trevor
+                         Anna Trevor3
                       </h5>
                       <h6>
                          Customer

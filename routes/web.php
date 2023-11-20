@@ -92,4 +92,6 @@ Route::middleware([
 
     route::get('/product_search',[HomeController::class,'product_search']);
 
+    route::get('/product_search2',[HomeController::class,'product_search2']);
+
 });

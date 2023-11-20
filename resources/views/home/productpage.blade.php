@@ -21,8 +21,8 @@
       <!-- responsive style -->
       <link href="home/css/responsive.css" rel="stylesheet" />
    </head>
-   <body class="sub_page">
-      <div class="hero_area">
+   <body>
+      <div>
          <!-- header section strats -->
         @include('home.header')
         <!-- end header section -->
@@ -47,6 +47,14 @@
                <h2>
                   Our <span>products</span>
                </h2>
+               <br><br>
+            <div>
+                <form action="{{url('product_search2')}}" method="GET">
+                    @csrf
+                    <input style="width: 500px; " type="text" name="search" placeholder="Search for Something">
+                    <input type="submit" value="search">
+                </form>
+            </div>
             </div>
             
             <div class="row">
@@ -99,12 +107,12 @@
     </div>
       <!-- footer section -->
       <!-- jQery -->
-      <script src="js/jquery-3.4.1.min.js"></script>
+      <script src="home/js/jquery-3.4.1.min.js"></script>
       <!-- popper js -->
-      <script src="js/popper.min.js"></script>
+      <script src="home/js/popper.min.js"></script>
       <!-- bootstrap js -->
-      <script src="js/bootstrap.js"></script>
+      <script src="home/js/bootstrap.js"></script>
       <!-- custom js -->
-      <script src="js/custom.js"></script>
+      <script src="home/js/custom.js"></script>
    </body>
 </html>

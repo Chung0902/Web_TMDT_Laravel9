@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <!-- Basic -->
     <meta charset="utf-8" />
@@ -32,10 +31,9 @@
         @include('home.slider')
         <!-- end slider section -->
     </div>
-    <!-- why section -->
-    @include('home.why')
-    <!-- end why section -->
-
+    <!-- client section -->
+    @include('home.client')
+    <!-- end client section -->
     <!-- arrival section -->
     @include('home.new_arival')
     <!-- end arrival section -->
@@ -47,9 +45,10 @@
     <!-- subscribe section -->
     @include('home.subscribe')
     <!-- end subscribe section -->
-    <!-- client section -->
-    @include('home.client')
-    <!-- end client section -->
+    
+    <!-- why section -->
+    @include('home.why')
+    <!-- end why section -->
     <!-- footer start -->
     @include('home.footer')
     <!-- footer end -->

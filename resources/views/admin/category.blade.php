@@ -54,8 +54,12 @@
 
                         @csrf
 
-                        <input type="text" class="input_color" name="category" placeholder="Write category name">
-                        <input type="submit" class="btn btn-primary" name="submit" value="Add Category">
+                        <input type="text" required="" class="input_color" name="category" placeholder="Write category name">
+                        <input type="submit" class="btn btn-primary" name="submit" value="Add Category" >
+                        <div class="div_design">
+                            <label for="">Product Image Here : </label>
+                            <input type="file" name="image" required="">
+                        </div>
                     </form>
                 </div>
 

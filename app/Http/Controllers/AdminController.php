@@ -25,9 +25,10 @@ class AdminController extends Controller
         $data = new category;
 
         $data->category_name = $request->category;
-
+        if($data){
+            
+        }
         $data->save();
-
         return redirect()->back()->with('message', 'Category Added Successfully');
     }
 
