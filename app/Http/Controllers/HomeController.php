@@ -17,12 +17,21 @@ use Stripe;
 class HomeController extends Controller{
 
 
+    public function blog_list()
+    {
+        return view('home.blog_list');
+    }
     public function index()
     {
         $product = Product::paginate(3);
         return view('home.userpage', compact('product'));
     }
 
+    public function products()
+    {
+        $product= Product::all();
+        return view('home.productpage',compact('product'));
+    }
     public function redirect()
     {
         $usertype = Auth::user()->usertype;
@@ -251,6 +260,16 @@ class HomeController extends Controller{
         return view('home.userpage', compact('product'));
     }
 
-
-
+    public function testimonial()
+    {
+        return view('home.testimonial');
+    }
+    public function about()
+    {
+        return view('home.about');
+    }
+    public function contact()
+    {
+        return view('home.contact');
+    }
 }
