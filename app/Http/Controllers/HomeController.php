@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Product;
+use App\Models\Category;
 use App\Models\Cart;
 use App\Models\Order;
 
@@ -24,7 +25,8 @@ class HomeController extends Controller{
     public function index()
     {
         $product = Product::paginate(3);
-        return view('home.userpage', compact('product'));
+        $category = Category::all();
+        return view('home.userpage', compact('product'),compact('category'));
     }
 
     public function products()
@@ -32,6 +34,11 @@ class HomeController extends Controller{
         $product= Product::all();
         return view('home.productpage',compact('product'));
     }
+    public function showAllproducts()
+    {
+        $product= Product::all();
+        return view('home.productpage',compact('product'));
+    } 
     public function redirect()
     {
         $usertype = Auth::user()->usertype;
@@ -258,6 +265,14 @@ class HomeController extends Controller{
         $product=product::where('title','LIKE',"%$search_text%")->orWhere('category','LIKE',"$search_text")->paginate(10);
 
         return view('home.userpage', compact('product'));
+    }
+    public function product_search2(Request $request)
+    {
+        $search_text=$request->search;
+
+        $product=product::where('title','LIKE',"%$search_text%")->orWhere('category','LIKE',"$search_text")->paginate(10);
+
+        return view('home.productpage', compact('product'));
     }
 
     public function testimonial()

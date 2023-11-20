@@ -40,6 +40,8 @@ Route::middleware([
     route::get('/redirect',[HomeController::class,'redirect']); 
 
     route::get('/products',[HomeController::class,'products']);
+
+    route::get('/categories',[HomeController::class,'categories']);
     //admin
 
     route::get('/view_category',[AdminController::class,'view_category']);
@@ -91,5 +93,7 @@ Route::middleware([
     route::get('/cancel_order/{id}',[HomeController::class,'cancel_order']);
 
     route::get('/product_search',[HomeController::class,'product_search']);
+
+    route::get('/product_search2',[HomeController::class,'product_search2']);
 
 });

@@ -78,7 +78,7 @@
                             </div>
                         </div>
                     </form>
-                    <a class="btn btn-success float-start" href="{{url('update_product',$product->id)}}">Edit</a>
+                    
                 </div>
             </div>
         </div>
