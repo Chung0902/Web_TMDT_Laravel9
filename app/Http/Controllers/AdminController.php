@@ -22,13 +22,17 @@ class AdminController extends Controller
 
     public function add_category(Request $request)
     {
-        $data = new category;
+        $category = new category;
 
-        $data->category_name = $request->category;
-        if($data){
-            
-        }
-        $data->save();
+        $category->category_name = $request->category;
+
+        $image = $request->file('image'); // Sử dụng file() thay vì image
+        $imagename = time() . '.' . $image->getClientOriginalExtension();
+        $image->move('product', $imagename);
+
+        $category->category_img = $imagename; // Đảm bảo tên cột trong cơ sở dữ liệu là "image"
+
+        $category->save();
         return redirect()->back()->with('message', 'Category Added Successfully');
     }
 

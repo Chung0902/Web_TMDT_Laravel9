@@ -50,7 +50,7 @@
 
                 <div class="div_center">
                     <h2 class="h2_font">Add Category</h2>
-                    <form action="{{ url('/add_category') }}" method="POST">
+                    <form action="{{ url('/add_category') }}" method="POST" enctype="multipart/form-data">
 
                         @csrf
 
@@ -73,6 +73,10 @@
 
                     <tr>
                         <td>{{$data->category_name}}</td>
+                        <td>
+
+                                <img height="100px" class="image_size" src="/product/{{$data->category_img}}" />
+                            </td>
                         <td>
                             <a onclick="return confirm('Are You Sure To Delete This')" class="btn btn-danger" href="{{url('delete_category', $data->id)}}">Delete</a>
                         </td>
