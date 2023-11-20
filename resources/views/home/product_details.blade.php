@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="mt-2">
-                    <form action="{{url('add_cart',$products->id)}}" method="Post">
+                    <form action="{{url('add_cart',$product->id)}}" method="Post">
                         @csrf
                         <div class="row">
                             <div class="col-md-4">

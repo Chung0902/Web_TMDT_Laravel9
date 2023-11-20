@@ -38,6 +38,8 @@ Route::middleware([
     })->name('dashboard');
 
     route::get('/redirect',[HomeController::class,'redirect']); 
+
+    route::get('/products',[HomeController::class,'products']);
     //admin
 
     route::get('/view_category',[AdminController::class,'view_category']);
@@ -83,4 +85,11 @@ Route::middleware([
     route::get('/stripe/{totalprice}',[HomeController::class,'stripe']);
 
     route::post('/stripe/{totalprice}',[HomeController::class, 'stripePost'])->name('stripe.post');
+
+    route::get('/show_order',[HomeController::class,'show_order']);
+
+    route::get('/cancel_order/{id}',[HomeController::class,'cancel_order']);
+
+    route::get('/product_search',[HomeController::class,'product_search']);
+
 });

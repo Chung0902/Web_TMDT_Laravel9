@@ -17,28 +17,21 @@ use Stripe;
 class HomeController extends Controller{
 
 
+    public function blog_list()
+    {
+        return view('home.blog_list');
+    }
     public function index()
     {
         $product = Product::paginate(3);
         return view('home.userpage', compact('product'));
     }
-    public function blog_list()
-    {
-        return view('home.blog_list');
-    }
-    public function testimonial()
-    {
-        return view('home.testimonial');
-    }
-    public function about()
-    {
-        return view('home.about');
-    }
-    public function contact()
-    {
-        return view('home.contact');
-    }
 
+    public function products()
+    {
+        $product= Product::all();
+        return view('home.productpage',compact('product'));
+    }
     public function redirect()
     {
         $usertype = Auth::user()->usertype;
@@ -225,5 +218,58 @@ class HomeController extends Controller{
             return redirect()->back()->with('success', 'Payment successful!');
               
         return back();
+    }
+
+
+    public function show_order()
+    {
+        if(Auth::id())
+        {   
+            $user=Auth::user();    
+
+            $userid=$user->id;
+
+            $order=order::where('user_id','=',$userid)->get();
+
+            return view('home.order', compact('order')); 
+        }
+        else
+        {
+            return redirect('login');
+        }
+
+    }
+
+    public function cancel_order($id)
+    {
+        $order=order::find($id);
+
+        $order->delivery_status='You canceled the order';
+
+        $order->save();
+
+        return redirect()->back();
+    }
+
+    public function product_search(Request $request)
+    {
+        $search_text=$request->search;
+
+        $product=product::where('title','LIKE',"%$search_text%")->orWhere('category','LIKE',"$search_text")->paginate(10);
+
+        return view('home.userpage', compact('product'));
+    }
+
+    public function testimonial()
+    {
+        return view('home.testimonial');
+    }
+    public function about()
+    {
+        return view('home.about');
+    }
+    public function contact()
+    {
+        return view('home.contact');
     }
 }
