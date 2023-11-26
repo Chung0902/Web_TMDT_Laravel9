@@ -7,7 +7,7 @@ use App\Models\Category;
 use App\Models\Order;
 use App\Models\Product;
 use Illuminate\Support\Facades\Redirect;
-use Notification;
+use Illuminate\Support\Facades\Notification;
 use App\Notifications\SendEmailNotification;
 
 class AdminController extends Controller
