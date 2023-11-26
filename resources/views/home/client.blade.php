@@ -8,6 +8,7 @@
        <div id="carouselExample3Controls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
             
+            @if(isset($category))
             @foreach($category as $data)
              <div class="carousel-item {{$data->id == 1 ? 'active': ''}} ">
                 <div class="box col-lg-10 mx-auto">
@@ -32,6 +33,8 @@
                 </div>
              </div>
             @endforeach
+            @endif
+            
           </div>
           <div class="carousel_btn_box">
              <a class="carousel-control-prev" href="#carouselExample3Controls" role="button" data-slide="prev">
