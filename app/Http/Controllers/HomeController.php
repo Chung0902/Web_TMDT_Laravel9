@@ -80,6 +80,11 @@ class HomeController extends Controller{
         $product = product::find($id);
         return view('home.product_details', compact('product'));
     }
+    public function products_cat()
+    {
+        $product = product::where('category','=','aaaa')->get();
+        return view('home.productpage',compact('product'));
+    }
 
     public function add_cart(Request $request, $id)
     {
