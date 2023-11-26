@@ -13,7 +13,7 @@
                 <div class="box col-lg-10 mx-auto">
                    <div class="img_container">
                       <div class="img-box">
-                         <div class="img_box-inner"><a href="{{url('/products')}}">
+                         <div class="img_box-inner"><a href="{{url('products_cat')}}">
                          <img  width="150px" height="150px" src="/product/{{$data->category_img}}" alt=""></a>
                          </div>
                       </div>

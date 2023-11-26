@@ -76,6 +76,8 @@ Route::middleware([
     //home
     route::get('/product_details/{id}',[HomeController::class,'product_details']);
 
+    route::get('/products_cat/{id}',[HomeController::class,'products_cat']);
+
     route::post('/add_cart/{id}',[HomeController::class,'add_cart']);
 
     route::get('/show_cart',[HomeController::class,'show_cart']);
