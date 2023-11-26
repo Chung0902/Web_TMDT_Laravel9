@@ -30,6 +30,7 @@ class HomeController extends Controller{
         return view('home.userpage', compact('product', 'category'));
     }
 
+
     public function products()
     {
         $product= Product::all();
