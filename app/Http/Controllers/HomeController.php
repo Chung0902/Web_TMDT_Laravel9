@@ -13,8 +13,6 @@ use App\Models\Order;
 use Session;
 use Stripe;
 
-use RealRashid\SweetAlert\Facades\Alert;
-
 
 
 class HomeController extends Controller{
@@ -28,7 +26,7 @@ class HomeController extends Controller{
     {
         $product = Product::paginate(3);
         $category = Category::all();
-        return view('home.userpage', compact('product','category') );
+        return view('home.userpage', compact('product'),compact('category'));
     }
 
     public function products()
@@ -71,8 +69,7 @@ class HomeController extends Controller{
             return view('admin.home',compact('total_product','total_order','total_user','order','total_revenue','total_delivered','total_processing'));
         } else {
             $product = Product::paginate(3);
-            $category = Category::all();
-            return view('home.userpage', compact('product','category') );
+            return view('home.userpage', compact('product'));
         }
     }
 
@@ -119,7 +116,6 @@ class HomeController extends Controller{
         $cart->quantity=$request->quantity;
 
         $cart->save();
-        Alert::success('Product added successfully','We have added product to the cart');
 
         return redirect()->back();
     }
