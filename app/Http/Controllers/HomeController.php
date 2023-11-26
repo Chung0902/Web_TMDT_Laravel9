@@ -22,12 +22,14 @@ class HomeController extends Controller{
     {
         return view('home.blog_list');
     }
+    
     public function index()
     {
         $product = Product::paginate(3);
         $category = Category::all();
-        return view('home.userpage', compact('product'),compact('category'));
+        return view('home.userpage', compact('product', 'category'));
     }
+
 
     public function products()
     {
