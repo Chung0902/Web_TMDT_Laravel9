@@ -36,6 +36,12 @@ class HomeController extends Controller{
         $product= Product::all();
         return view('home.productpage',compact('product'));
     }
+
+    public function products_cat($id)
+    {
+        $product= Product::where('category','=',$id)->get();
+        return view('home.productpage',compact('product'));
+    }
     public function showAllproducts()
     {
         $product= Product::all();
