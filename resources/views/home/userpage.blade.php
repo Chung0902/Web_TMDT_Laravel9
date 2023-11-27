@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <!-- Basic -->
     <meta charset="utf-8" />
@@ -23,6 +24,7 @@
 </head>
 
 <body>
+    @include('sweetalert::alert')
     <div class="hero_area">
         <!-- header section strats -->
         @include('home.header')
@@ -45,7 +47,7 @@
     <!-- subscribe section -->
     @include('home.subscribe')
     <!-- end subscribe section -->
-    
+
     <!-- why section -->
     @include('home.why')
     <!-- end why section -->
@@ -62,14 +64,14 @@
 
 
     <script>
-        document.addEventListener("DOMContentLoaded", function(event) { 
-            var scrollpos = localStorage.getItem('scrollpos');
-            if (scrollpos) window.scrollTo(0, scrollpos);
-        });
+    document.addEventListener("DOMContentLoaded", function(event) {
+        var scrollpos = localStorage.getItem('scrollpos');
+        if (scrollpos) window.scrollTo(0, scrollpos);
+    });
 
-        window.onbeforeunload = function(e) {
-            localStorage.setItem('scrollpos', window.scrollY);
-        };
+    window.onbeforeunload = function(e) {
+        localStorage.setItem('scrollpos', window.scrollY);
+    };
     </script>
     <!-- jQery -->
     <script src="home/js/jquery-3.4.1.min.js"></script>
