@@ -48,10 +48,7 @@
     <section class="product_section layout_padding">
         <div class="container">
             <div class="heading_container heading_center">
-                <h2>
-                    Our <span>products</span>
-                </h2>
-                <br><br>
+                
                 <div>
                     <form action="{{url('product_search2')}}" method="GET">
                         @csrf
@@ -110,13 +107,6 @@
     <!-- footer start -->
     @include('home.footer')
     <!-- footer end -->
-    <div class="cpy_">
-        <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
-
-            Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-
-        </p>
-    </div>
     <!-- footer section -->
     <!-- jQery -->
     <script src="home/js/jquery-3.4.1.min.js"></script>

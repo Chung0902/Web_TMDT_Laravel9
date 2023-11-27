@@ -6,7 +6,7 @@
         <nav class="navbar navbar-expand-lg custom_nav-container ">
             <span class="navbar-brand fw-1" href="{{url('/')}}" style="font-size: 40px;">
                 <!-- <img width="250" src="images/logo.png" alt="#" /> -->
-                FASHION STRORE
+                FASHION STORE
             </span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
