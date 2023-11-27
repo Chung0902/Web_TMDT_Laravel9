@@ -26,9 +26,6 @@
                       <h6>
                          Category
                       </h6>
-                      <p>
-                         Dignissimos reprehenderit repellendus nobis error quibusdam? Atque animi sint unde quis reprehenderit, et, perspiciatis, debitis totam est deserunt eius officiis ipsum ducimus ad labore modi voluptatibus accusantium sapiente nam! Quaerat.
-                      </p>
                    </div>
                 </div>
              </div>

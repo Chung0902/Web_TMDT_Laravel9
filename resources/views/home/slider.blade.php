@@ -1,10 +1,11 @@
 <section class="slider_section ">
-    <div class="slider_bg_box">
-       <img src="images/slider-bg.jpg" alt="">
-    </div>
+   <div class="slider_bg_box">
+               <img src="images/slider-bg.jpg" alt="">
+         </div>
     <div id="customCarousel1" class="carousel slide" data-ride="carousel">
        <div class="carousel-inner">
           <div class="carousel-item active">
+          
              <div class="container ">
                 <div class="row">
                    <div class="col-md-7 col-lg-6 ">
@@ -17,7 +18,8 @@
                             On Everything
                          </h1>
                          <p>
-                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
+                         Discount up to 20%. Prices shown onsite are final sale price.
+                           <br>Terms & Conditions and Exclusions apply.
                          </p>
                          <div class="btn-box">
                             <a href="" class="btn1">
@@ -42,8 +44,8 @@
                             On Everything
                          </h1>
                          <p>
-                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                         </p>
+                         Discount up to 20%. Prices shown onsite are final sale price.
+                           <br>Terms & Conditions and Exclusions apply.                         </p>
                          <div class="btn-box">
                             <a href="" class="btn1">
                             Shop Now
@@ -67,8 +69,8 @@
                             On Everything
                          </h1>
                          <p>
-                            Explicabo esse amet tempora quibusdam laudantium, laborum eaque magnam fugiat hic? Esse dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto veritatis delectus repellat modi impedit sequi.
-                         </p>
+                         Discount up to 20%. Prices shown onsite are final sale price.
+                           <br>Terms & Conditions and Exclusions apply.                         </p>
                          <div class="btn-box">
                             <a href="" class="btn1">
                             Shop Now

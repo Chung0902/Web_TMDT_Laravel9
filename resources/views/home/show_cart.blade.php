@@ -64,7 +64,17 @@
         <!-- header section strats -->
         @include('home.header')
         <!-- end header section -->
-       
+        <section class="inner_page_head">
+        <div class="container_fuild">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="full">
+                        <h3>Cart Grid</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     
         @if (session()->has('message'))
                 <div class="alert alert-success">
@@ -122,13 +132,7 @@
     <!-- footer start -->
     @include('home.footer')
     <!-- footer end -->
-    <div class="cpy_">
-        <p class="mx-auto">© 2021 All Rights Reserved By <a href="https://html.design/">Free Html Templates</a><br>
-
-            Distributed By <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
-
-        </p>
-    </div>
+    
     <!-- jQery -->
     <script src="home/js/jquery-3.4.1.min.js"></script>
     <!-- popper js -->
