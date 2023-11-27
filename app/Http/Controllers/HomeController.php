@@ -12,7 +12,7 @@ use App\Models\Order;
 
 use Session;
 use Stripe;
-
+use RealRashid\SweetAlert\Facades\Alert;
 
 
 class HomeController extends Controller{
@@ -125,6 +125,7 @@ class HomeController extends Controller{
         $cart->quantity=$request->quantity;
 
         $cart->save();
+        Alert::success('Product added successfully!','We have add product to the cart');
 
         return redirect()->back();
     }
