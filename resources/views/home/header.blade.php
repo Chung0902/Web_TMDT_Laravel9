@@ -4,7 +4,10 @@
 <header class="header_section">
     <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-            <a class="navbar-brand" href="{{url('/')}}"><img width="250" src="images/logo.png" alt="#" /></a>
+            <span class="navbar-brand fw-1" href="{{url('/')}}" style="font-size: 40px;">
+                <!-- <img width="250" src="images/logo.png" alt="#" /> -->
+                FASHION STRORE
+            </span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class=""> </span>
@@ -28,7 +31,7 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/blog_list') }}">Blog</a>
-                    </li>                    
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ url('/contact') }}">Contact</a>
                     </li>
@@ -38,7 +41,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="{{url('show_order')}}">Order</a>
                     </li>
-                    
+
                     @if (Route::has('login'))
                     @auth
                     <li class="nav-item">
